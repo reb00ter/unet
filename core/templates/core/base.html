@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block page_title %}Главная | {% endblock %}Товары Ухты</title>
+    <link rel="stylesheet" href="{% static "core/css/main.css" %}">
+    <link rel="stylesheet" href="{% static "core/css/grid.css" %}">
+</head>
+<body>
+<div id="header">
+    <div class="container_15">
+        <div class="grid_2" id="logo"></div>
+        <div class="grid_12" id="main_menu">{% include "core/menu.html" %}</div>
+        <div class="grid_1" id="profile">{% include "core/user_block.html" %}</div>
+    </div>
+</div>
+<div id="content">
+    {% block page_content %}{% endblock %}
+</div>
+<div id="footer">
+    <div class="container_15"></div>
+</div>
+</body>
+</html>
