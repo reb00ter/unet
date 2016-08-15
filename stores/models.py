@@ -60,7 +60,7 @@ class Category(models.Model):
     class Meta:
         verbose_name = "категория товара"
         verbose_name_plural = "категории товаров"
-        ordering = ["weigth",]
+        ordering = ["weight",]
 
 
 class StoreCategory(models.Model):

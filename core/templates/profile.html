@@ -1,0 +1,12 @@
+{% extends "core/base.html" %}
+{% block page_title %}Профиль {{ user.username }}{% endblock %}
+{% block page_content %}
+
+    <div class="container_15">
+        <div class="row">
+            <div class="grid_15"><h1>{{ user.username }}</h1>
+                <p>{{ user.first_name }} {{ user.last_name }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

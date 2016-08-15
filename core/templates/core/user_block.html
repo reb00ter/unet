@@ -1,0 +1,8 @@
+{% load staticfiles %}
+{% if user.is_authenticated %}
+    <a href="{% url "user_profile" user.login%}">{{ user.login }}</a>
+    <a href="{% url "user_sign_out" %}"><img src="{% static "core/imgs/sign-out.png" %}" title="Выйти"></a>
+{% else %}
+    <a href="{% url "user_sign_in" %}"><img src="{% static "core/imgs/sign-in.png" %}" title="Войти"></a>
+    <a href="{% url "user_sign_up" %}"><img src="{% static "core/imgs/sign-up.png" %}" title="Зарегистрироваться"></a>
+{% endif %}
